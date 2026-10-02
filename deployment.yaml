@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myweb
+  name: myapp
 spec:
   replicas: 2
   strategy:
@@ -18,7 +18,7 @@ spec:
         app: test-deploy
     spec:
       containers:
-        - name: myweb
+        - name: myapp
           image: chanjookim/myapp:latest
           ports:
             - containerPort: 8080
